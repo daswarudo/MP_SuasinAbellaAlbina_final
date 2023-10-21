@@ -8,7 +8,8 @@ public class playerHealth : MonoBehaviour
 {
     public float health = 100f;
     public Text text;
-
+    [SerializeField] private Transform player;
+    [SerializeField] private Transform respawnPoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +23,10 @@ public class playerHealth : MonoBehaviour
         if (health < 1)
         {
             //Debug.Log("DED");
-            
-            FindObjectOfType<GameManager>().EndGame();
-            
+
+            //FindObjectOfType<GameManager>().EndGame();
+            resetHealth();
+            player.transform.position = respawnPoint.transform.position;
         }
     }
     void OnCollisionEnter(Collision collision)
@@ -33,7 +35,7 @@ public class playerHealth : MonoBehaviour
         {
             //Debug.Log("Collision Detected with Enemy!");
             health -= 20;
-            Debug.Log("health: "+health);
+            //Debug.Log("health: "+health);
         }
 
     }

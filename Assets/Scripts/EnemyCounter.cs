@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EnemyCounter : MonoBehaviour
 {
     private int enemyCount = 0;
+    //public AudioSource sound;
     public Text text;
     void Start()
     {
@@ -29,7 +31,15 @@ public class EnemyCounter : MonoBehaviour
 
         if(enemyCount < 1)
         {
-            FindObjectOfType<GameManager>().Win();
+            //sound.Play();
+            Invoke("End", 1); //2s delay
         }
+        
+    }
+
+    void End()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
     }
 }

@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    /*
     bool gamehasEnded = false;
     public float restartDelay = 2f;
     [SerializeField] private Transform player;
@@ -34,5 +36,16 @@ public class GameManager : MonoBehaviour
     public void Win()
     {
         SceneManager.LoadScene(1);
+    }*/
+    private int score = 0;
+    public Text text;
+    void Update()
+    {
+        Debug.Log("score: "+score);
+        text.text = "Score: " + score.ToString();
+    }
+    public void addScore()
+    {
+        score += 100;
     }
 }
