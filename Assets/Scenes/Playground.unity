@@ -2533,6 +2533,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCapsule
       objectReference: {fileID: 0}
+    - target: {fileID: 5086956057191757304, guid: b98592aca8a4e264ab200687b961c826,
+        type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5608018622810156878, guid: b98592aca8a4e264ab200687b961c826,
         type: 3}
       propertyPath: m_RootOrder
