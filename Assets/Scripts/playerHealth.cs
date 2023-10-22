@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class playerHealth : MonoBehaviour
 {
+    public AudioSource sound;
     public float health = 100f;
     public Text text;
     [SerializeField] private Transform player;
@@ -36,6 +37,7 @@ public class playerHealth : MonoBehaviour
             //Debug.Log("Collision Detected with Enemy!");
             health -= 20;
             //Debug.Log("health: "+health);
+            sound.Play();
         }
 
     }

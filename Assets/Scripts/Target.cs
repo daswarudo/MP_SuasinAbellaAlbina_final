@@ -10,9 +10,11 @@ public class Target : MonoBehaviour
     public float health = 50f;
     
     public AudioSource sound;
+    public AudioSource dmg;
     public void TakeDamage (float amount)
     {
         health -= amount;
+        dmg.Play ();
         if(health <= 0f)
         {
             Die();

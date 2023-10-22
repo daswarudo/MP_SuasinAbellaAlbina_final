@@ -7,6 +7,7 @@ using Unity.VisualScripting;
 
 public class Gun : MonoBehaviour
 {
+    public float impactForce = 10;
     public AudioSource sound;
     private StarterAssetsInputs _input;
     public float damage = 10f;
@@ -39,6 +40,11 @@ public class Gun : MonoBehaviour
             if(target != null)
             {
                 target.TakeDamage(damage);
+            }
+
+            if(hit.rigidbody != null)
+            {
+                hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
         }
         lineRenderer.enabled = true;

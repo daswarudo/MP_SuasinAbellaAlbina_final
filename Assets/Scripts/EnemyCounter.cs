@@ -27,7 +27,7 @@ public class EnemyCounter : MonoBehaviour
 
         //Debug.Log("Current Enemy Count: " + enemyCount);
 
-        text.text = "Count: "+ enemyCount.ToString();
+        text.text = "Remaining: "+ enemyCount.ToString();
 
         if(enemyCount < 1)
         {
