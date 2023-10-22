@@ -10,7 +10,7 @@ public class enemyMove : MonoBehaviour
     private Animator animator;
     public NavMeshAgent enemy;//navMeshAgent
     public Transform Player;
-
+    /*
     public float startWaitTime = 4;
     public float timeToRotate = 2;
     public float speedWalk = 6;
@@ -35,14 +35,14 @@ public class enemyMove : MonoBehaviour
     bool m_PlayerInRange;
     bool m_PlayerNear;
     bool m_IsPatrol;
-    bool m_CaughtPlayer;
+    bool m_CaughtPlayer;*/
 
     void Start()
     {
         animator = GetComponent<Animator>();
         animator.SetBool("isMoving 0", false);
         animator.SetBool("isAttack", false);
-
+        /*
         m_PlayerPosition = Vector3.zero;
         m_IsPatrol = true;
         m_CaughtPlayer = false;
@@ -55,7 +55,7 @@ public class enemyMove : MonoBehaviour
 
         enemy.isStopped = false;
         enemy.speed = speedWalk;
-        enemy.SetDestination(waypoints[m_CurrentWaypontIndex].position);
+        enemy.SetDestination(waypoints[m_CurrentWaypontIndex].position);*/
         
     }
     void Update()
