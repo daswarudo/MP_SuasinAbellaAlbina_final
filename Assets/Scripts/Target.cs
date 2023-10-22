@@ -11,17 +11,27 @@ public class Target : MonoBehaviour
     
     public AudioSource sound;
     public AudioSource dmg;
+    private Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        animator.SetBool("isDead", false);
+    }
     public void TakeDamage (float amount)
     {
         health -= amount;
         dmg.Play ();
         if(health <= 0f)
         {
-            Die();
+            animator.SetBool("isDead", true);
+            Invoke("Die", 2);
+            //Die();
         }
     }
     void Die()
     {
+        
         sound.Play();
         Destroy(gameObject);
         FindObjectOfType<GameManager>().addScore();
