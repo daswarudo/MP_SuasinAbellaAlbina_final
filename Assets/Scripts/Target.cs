@@ -26,7 +26,7 @@ public class Target : MonoBehaviour
         {
             animator.SetBool("isDead", true);
             Invoke("Die", 2);
-            //Die();
+            //Die();//
         }
     }
     void Die()
