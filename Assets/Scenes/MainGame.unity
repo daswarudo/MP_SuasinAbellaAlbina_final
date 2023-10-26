@@ -287,8 +287,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2071537368}
-  - {fileID: 1557293985}
   - {fileID: 655013243}
+  - {fileID: 1557293985}
   - {fileID: 879360339}
   - {fileID: 1127534426}
   - {fileID: 1262823330}
@@ -3123,7 +3123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0.0699749, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.07058811, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
