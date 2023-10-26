@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class playerHealth : MonoBehaviour
 {
+    public Slider slider;
     public AudioSource sound;
     public float health = 100f;
     public Text text;
@@ -20,7 +21,8 @@ public class playerHealth : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        text.text = "Health: " + health.ToString();
+        slider.value = health;
+        //text.text = "Health: " + health.ToString();
         if (health < 1)
         {
             //Debug.Log("DED");
